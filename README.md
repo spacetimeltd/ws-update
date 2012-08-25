@@ -1,2 +1,2 @@
-### This is the latest, hopefully final, and least finalist of the wsup project.
+### This is the latest, hopefully final, at least a finalist of the wsup project code.
 
