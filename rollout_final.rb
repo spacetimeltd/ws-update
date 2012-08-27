@@ -22,8 +22,6 @@ def spiderIds id
 
     stack = to_c @chash[id]
 
-    binding.pry
-
     while !stack.empty?
 
         cid = stack.delete_at(0)
@@ -56,11 +54,11 @@ multipath.each do |x|
 end
 
 # then create a hash of these keyed by name instead of id
-mpnhash = {}
+@mpnhash = {}
 @ihash.each do |z|
     id = z[0]
     if z[1]['path'] =~ /:/
-        mpnhash[z[1]['name']] = z[1]
+        @mpnhash[z[1]['name']] = z[1]
     end
 end
 

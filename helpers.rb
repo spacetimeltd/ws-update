@@ -2,6 +2,16 @@
 # here comes a section of functions for post-processing as one would expect
 # you won't see these in use until the end, but they go up here anyway.
 
+def path_to_parent path, rdh, xpaths
+    puts "this is the path that doesn't need updating: #{path}"
+    parent = path.split(':').last
+    begin
+    xpaths.delete xpaths.find { |x| rdh[@xref[x]]['name'] =~ /#{parent}/ }
+    rescue
+        binding.pry
+    end
+end
+
 def genupload data
     CSV.open("update-data.csv", "wb") do |csv|
         csv << @uhead

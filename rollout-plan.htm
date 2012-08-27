@@ -1,0 +1,252 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
+
+<p class=MsoTitle># Components of an update data set:</p>
+
+</div>
+
+<p class=MsoNormal>1.) csv file containing update data in three parts</p>
+
+<p class=MsoNormal style='text-indent:.5in'>1.) updated 'new-item' records
+comprised of:</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>* new ID with
+corresponding 'Product-url', new image names and updated 'labels' values</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>* code appended
+with 'tmp'</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>* options codes
+appended with 'tmp'</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>* all other
+original data preserved</p>
+
+<p class=MsoNormal style='text-indent:.5in'>2.) original 'new-item' records
+made obsolete by update, modified thusly:</p>
+
+<p class=MsoNormal>                                * code appended with 'old'</p>
+
+<p class=MsoNormal>                                * options codes appended
+with 'old'</p>
+
+<p class=MsoNormal style='margin-left:1.0in'>* path changed to new temporary
+container section named &quot;TODELETE&quot;<br>
+ ( This should remove the obsolete record from the location listed in the
+'path' field. However, if the id appears in other locations it will have to be
+manually removed from the 'contents' of those pages.)</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>* 'labels' values
+updated</p>
+
+<p class=MsoNormal style='margin-left:.5in'>3.) leftover original 'new-item'
+records not intended for update in this set but containing 'labels' values that
+will be obsolete after the update (ie ids that are in this update set)</p>
+
+<p class=MsoNormal>                                * 'labels' values updated to
+reflect the new ids</p>
+
+<p class=MsoNormal>2.) list of ids from this update set that appear in
+'contents' of ids that are not being updated in this set. These are products
+that show up on multiple pages. Since 'path' only contains one location and
+'contents' data can't be  changed directly any other locations will have to
+have their 'contents' ids updated manually to complete the installation of each
+set.</p>
+
+<p class=MsoNormal>3.) redirects csv containing redirects for the new ids</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:115%;font-family:"Calibri","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:26.0pt;line-height:115%;font-family:
+"Cambria","serif";color:#17365D;letter-spacing:.25pt'>&nbsp;</span></p>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0in 0in 4.0pt 0in'>
+
+<p class=MsoTitle># Rollout Plan</p>
+
+</div>
+
+<p class=MsoNormal>Ideally, this is how it will work:</p>
+
+<p class=MsoNormal>Step 1.  Import/upload update data set csv file<br>
+                This will add the new records with the updated ids, move the
+old records that are being replaced into a section named ‘TODELETE’, and update
+the ‘labels’ data for any records affected by the update but not updated in
+this set. </p>
+
+<p class=MsoNormal style='text-indent:.5in'>In order to avoid errors from
+duplicate ‘code’ values the new and old records’ code values (in both the
+‘code’ field and ‘options’ field) are appended with ‘tmp’ and ‘old’
+respectively. *** I’m not sure why I couldn’t just tack ‘old’ onto the old
+records and put the actually, unmodified (no ‘tmp’) code values in the new
+records. I think the yahoo system still recognized them, so after the catalog
+is published and the changes are made permanent then the ‘tmp’ ending can be
+removed from the new records. ***</p>
+
+<p class=MsoNormal>Step 2. Manually update additional ‘contents’ data for
+products appearing in multiple locations not covered by the ‘path’ value.</p>
+
+<p class=MsoNormal>Step 3. Delete old records now obsolete, should be as simple
+as deleting the ‘TODELETE’ section.</p>
+
+<p class=MsoNormal>Step 4. Import redirects for the replaced ids.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1># Possible problem</h1>
+
+<p class=MsoNormal>I just realized that there may be some overlap of the data
+sets because of the spidery influence of the ‘labels’ data. I’m not sure what’s
+going to happen when the next set is uploaded after the previous set is done. I
+may have to rerun the script and regenerate the remaining data sets to incorporate
+the changes before uploading again, either that or add code to keep the script
+cognizant of the previously updated data. Or in the worst case we won’t be able
+to do the update in stages so we’ll have to do it in one lump – expect a long
+day of cleanup in this case, probably.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>                                                              
+</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
